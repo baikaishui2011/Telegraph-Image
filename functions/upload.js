@@ -13,7 +13,7 @@ export async function onRequestPost(context) {  // Contents of context object
     telemetryData(context);
     const url = new URL(clonedRequest.url);
     url.searchParams.append('source', 'bugtracker');
-    console.log("图片地址："+'https://telegra.ph/' + url.pathname + url.search)
+    console.log('https://telegra.ph/' + url.pathname + url.search)
     const response = await fetch('https://telegra.ph/' + url.pathname + url.search, {
         method: clonedRequest.method,
         headers: clonedRequest.headers,
